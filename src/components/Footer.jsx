@@ -1,4 +1,4 @@
-import { Salad } from 'lucide-react'
+import logo from '../assets/images/logo.png'
 import '../styles/Footer.css'
 
 function Footer({ whatsapp }) {
@@ -6,8 +6,7 @@ function Footer({ whatsapp }) {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <Salad size={22} />
-          <span>Seu Nutricionista</span>
+          <img src={logo} alt="Logo Daniel Henrique" style={{ height: '36px', width: 'auto' }} />
         </div>
         <div className="footer-links">
           <a href="#metodo">Método</a>
