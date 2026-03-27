@@ -1,0 +1,41 @@
+.cta-final {
+  padding: 96px 24px;
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+  text-align: center;
+  color: var(--branco);
+}
+
+.cta-container { max-width: 700px; margin: 0 auto; }
+
+.cta-titulo {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin-bottom: 24px;
+}
+
+.cta-titulo span { color: var(--amarelo); }
+
+.cta-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  font-size: 1.1rem !important;
+  padding: 20px 48px !important;
+  margin-bottom: 40px;
+}
+
+.cta-garantias {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cta-garantias span {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+}
