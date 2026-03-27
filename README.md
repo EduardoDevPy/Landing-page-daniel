@@ -2,7 +2,7 @@
 
 Landing page profissional desenvolvida para o nutricionista **Daniel Henrique**, especializado em Nutrição Clínica e Esportiva.
 
-![Preview do site](./public/preview.png)
+![Preview do site](./src/assets/images/screenshotSite.jpg)
 
 ---
 
