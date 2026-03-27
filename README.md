@@ -34,7 +34,7 @@ Página de alta conversão criada para apresentar os serviços de acompanhamento
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/landing-page-daniel.git
+git clone https://github.com/EduardoDevPy/landing-page-daniel.git
 
 # Entre na pasta
 cd landing-page-daniel
@@ -56,4 +56,4 @@ npm run build
 
 ---
 
-Desenvolvido por [Eduardo](https://github.com/seu-usuario)
+Desenvolvido por [Eduardo](https://github.com/EduardoDevPy)
