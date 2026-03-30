@@ -22,8 +22,26 @@
 .objecao-item {
   background: var(--cinza-claro);
   border-radius: 16px;
-  padding: 28px 32px;
   border-left: 5px solid var(--verde-claro);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.objecao-item.aberto {
+  border-left-color: var(--verde-medio);
+}
+
+.objecao-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }
 
 .objecao-duvida {
@@ -31,12 +49,23 @@
   font-weight: 700;
   color: var(--preto-suave);
   font-size: 1rem;
-  margin-bottom: 12px;
   font-style: italic;
+}
+
+.objecao-chevron {
+  color: var(--verde-medio);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.objecao-item.aberto .objecao-chevron {
+  transform: rotate(180deg);
 }
 
 .objecao-resposta {
   color: var(--cinza-texto);
   font-size: 0.95rem;
   line-height: 1.6;
+  padding: 0 32px 24px;
+  overflow: hidden;
 }

@@ -1,5 +1,6 @@
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import '../styles/Depoimentos.css'
 
 const depoimentos = [
@@ -24,6 +25,32 @@ const depoimentos = [
 ]
 
 function Depoimentos() {
+  const gridRef = useRef(null)
+  const [canPrev, setCanPrev] = useState(false)
+  const [canNext, setCanNext] = useState(true)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  function handleScroll() {
+    const el = gridRef.current
+    if (!el) return
+    setCanPrev(el.scrollLeft > 8)
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8)
+    const index = Math.round(el.scrollLeft / el.clientWidth)
+    setActiveIndex(index)
+  }
+
+  function scroll(dir) {
+    const el = gridRef.current
+    if (!el) return
+    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: 'smooth' })
+  }
+
+  function scrollToIndex(i) {
+    const el = gridRef.current
+    if (!el) return
+    el.scrollTo({ left: i * el.clientWidth * 0.85, behavior: 'smooth' })
+  }
+
   return (
     <section className="depoimentos" id="depoimentos">
       <div className="depoimentos-container">
@@ -45,7 +72,7 @@ function Depoimentos() {
         >
           Quem já viveu a transformação
         </motion.h2>
-        <div className="depoimentos-grid">
+        <div className="depoimentos-grid" ref={gridRef} onScroll={handleScroll}>
           {depoimentos.map((dep, i) => (
             <motion.div
               key={i}
@@ -71,6 +98,34 @@ function Depoimentos() {
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="carrossel-nav">
+          <button
+            className="carrossel-btn"
+            onClick={() => scroll(-1)}
+            disabled={!canPrev}
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div className="carrossel-dots">
+            {depoimentos.map((_, i) => (
+              <button
+                key={i}
+                className={`carrossel-dot${activeIndex === i ? ' ativo' : ''}`}
+                onClick={() => scrollToIndex(i)}
+                aria-label={`Ir para depoimento ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            className="carrossel-btn"
+            onClick={() => scroll(1)}
+            disabled={!canNext}
+            aria-label="Próximo"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
         <p className="depoimentos-nota">
           * Resultados podem variar de acordo com cada organismo e adesão ao plano.

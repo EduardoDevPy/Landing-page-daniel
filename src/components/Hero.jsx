@@ -20,14 +20,14 @@ function Hero({ whatsapp }) {
               <Leaf size={14} /> Nutrição Personalizada
             </motion.span>
             <motion.h1 className="hero-titulo" {...fadeUp(0.25)}>
-              Cansado de tentar emagrecer, se esforçar<br />
-              <span className="hero-destaque">e acabar voltando do zero?</span>
+              Emagrecer, ganhar massa ou cuidar da saúde?<br />
+              <span className="hero-destaque">você merece um plano que funcione de verdade.</span>
             </motion.h1>
             <div className="hero-foto-mobile">
               <motion.img src={nutriDaniel} alt="Daniel Henrique, Nutricionista" className="hero-img" {...fadeUp(0.35)} />
             </div>
             <motion.p className="hero-subtitulo" {...fadeUp(0.4)}>
-              Você não precisa de mais uma dieta. Precisa de um <strong>plano feito pra você</strong>, com acompanhamento de verdade e um caminho claro até o resultado.
+              Seja qual for o seu objetivo, você não precisa de mais uma dieta genérica. Precisa de um <strong className="hero-destaque">plano feito pra você</strong>, com acompanhamento de verdade e um caminho claro até o resultado.
             </motion.p>
             <motion.div className="hero-btns" {...fadeUp(0.55)}>
               <motion.a

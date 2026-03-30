@@ -27,7 +27,7 @@ function Navbar({ whatsapp }) {
 
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <li><a href="#metodo" onClick={() => setMenuOpen(false)}>Método</a></li>
-          <li><a href="#transformacao" onClick={() => setMenuOpen(false)}>Resultados</a></li>
+          <li><a href="#planos" onClick={() => setMenuOpen(false)}>Planos</a></li>
           <li><a href="#depoimentos" onClick={() => setMenuOpen(false)}>Depoimentos</a></li>
           <li>
             <a href={whatsapp} target="_blank" rel="noreferrer" className="navbar-cta">

@@ -6,6 +6,7 @@ import Diferencial from './components/Diferencial.jsx'
 import Transformacao from './components/Transformacao.jsx'
 import Objecoes from './components/Objecoes.jsx'
 import Depoimentos from './components/Depoimentos.jsx'
+import Planos from './components/Planos.jsx'
 import CtaFinal from './components/CtaFinal.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsappButton from './components/WhatsappButton.jsx'
@@ -20,6 +21,7 @@ function App() {
       <Dor />
       <Metodo whatsapp={WHATSAPP_LINK} />
       <Diferencial />
+      <Planos whatsapp={WHATSAPP_LINK} />
       <Transformacao />
       <Objecoes />
       <Depoimentos />

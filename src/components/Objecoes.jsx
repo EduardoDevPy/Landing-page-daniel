@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
 import '../styles/Objecoes.css'
 
 const objecoes = [
@@ -7,8 +9,8 @@ const objecoes = [
     resposta: 'O plano é montado pra caber na sua rotina do jeito que ela é. Sem receita complicada, sem horas na cozinha.'
   },
   {
-    duvida: '"Minha disciplina é péssima"',
-    resposta: 'Você não precisa ser perfeito. Com acompanhamento de verdade, quando você trava, tem alguém pra te ajudar a retomar.'
+    duvida: '"Já treino há meses e não estou evoluindo"',
+    resposta: 'Treino sem nutrição adequada é esforço desperdiçado. A alimentação certa potencializa seu treino e faz o músculo crescer de verdade.'
   },
   {
     duvida: '"Já tentei tanta coisa e nada funcionou"',
@@ -21,6 +23,12 @@ const objecoes = [
 ]
 
 function Objecoes() {
+  const [aberto, setAberto] = useState(null)
+
+  function toggle(i) {
+    setAberto(aberto === i ? null : i)
+  }
+
   return (
     <section className="objecoes">
       <div className="objecoes-container">
@@ -46,14 +54,29 @@ function Objecoes() {
           {objecoes.map((item, i) => (
             <motion.div
               key={i}
-              className="objecao-item"
+              className={`objecao-item${aberto === i ? ' aberto' : ''}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <p className="objecao-duvida">{item.duvida}</p>
-              <p className="objecao-resposta">→ {item.resposta}</p>
+              <button className="objecao-toggle" onClick={() => toggle(i)}>
+                <span className="objecao-duvida">{item.duvida}</span>
+                <ChevronDown size={20} className="objecao-chevron" />
+              </button>
+              <AnimatePresence initial={false}>
+                {aberto === i && (
+                  <motion.p
+                    className="objecao-resposta"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    → {item.resposta}
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

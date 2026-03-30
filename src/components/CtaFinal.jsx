@@ -13,7 +13,7 @@ function CtaFinal({ whatsapp }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Se você quiser continuar tentando sozinho,<br />
+          Se você quiser continuar sem resultado,<br />
           <span>sem problema.</span>
         </motion.h2>
         <motion.p
@@ -23,9 +23,18 @@ function CtaFinal({ whatsapp }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          Mas se você quer parar de dar voltas e ter resultado de verdade,<br />
-          <strong>esse é o momento certo pra começar.</strong>
+          Mas se você quer parar de dar voltas, seja para emagrecer, ganhar massa ou cuidar da sua saúde.<br />
+          <span className="hero-destaque">esse é o momento certo pra começar.</span>
         </motion.p>
+        <motion.div
+          className="cta-vagas"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.25 }}
+        >
+          <span className="vaga-dot" /> Poucas vagas disponíveis este mês
+        </motion.div>
         <motion.a
           href={whatsapp}
           target="_blank"

@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
-import { RefreshCw, TrendingDown, HelpCircle, Frown, Clock, Brain } from 'lucide-react'
+import { RefreshCw, TrendingDown, HelpCircle, Dumbbell, Clock, Brain } from 'lucide-react'
 import '../styles/Dor.css'
 
 const dores = [
   { icone: RefreshCw, texto: 'Começa animado e para no meio do caminho' },
-  { icone: TrendingDown, texto: 'Perde peso e recupera tudo em pouco tempo' },
-  { icone: HelpCircle, texto: 'Não sabe mais em quem confiar ou o que funciona' },
-  { icone: Frown, texto: 'Já tentou muita coisa e nenhuma funcionou de verdade' },
+  { icone: TrendingDown, texto: 'Treina pesado mas não vê o músculo crescer' },
+  { icone: HelpCircle, texto: 'Não sabe mais em quem confiar ou o que de fato funciona' },
+  { icone: Dumbbell, texto: 'Quer emagrecer sem perder a massa que tanto batalhou' },
   { icone: Clock, texto: 'Não tem tempo pra cozinhar ou seguir cardápio complicado' },
-  { icone: Brain, texto: 'Briga com a ansiedade e a compulsão toda semana' },
+  { icone: Brain, texto: 'Sabe que precisa cuidar da saúde, mas não sabe por onde começar' },
 ]
 
 function Dor() {
@@ -31,8 +31,8 @@ function Dor() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          Se você sente que já tentou de tudo<br />
-          <span>e nada funciona</span>
+          Você sabe o que quer alcançar,<br />
+          <span>mas o resultado não aparece</span>
         </motion.h2>
         <div className="dor-grid">
           {dores.map((item, i) => {
@@ -60,10 +60,10 @@ function Dor() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p>
-            <strong>O problema não é você.</strong><br />
+            <span className="hero-destaque">O problema não é você.</span><br />
             Dieta pronta não funciona porque foi feita pra qualquer pessoa, menos pra você.<br />
-            Ela ignora sua rotina, seus hábitos, sua ansiedade, sua vida.<br />
-            Por isso é tão difícil sustentar. <strong>Até agora.</strong>
+            Ela ignora sua rotina, seus objetivos, seu treino, sua vida.<br />
+            Por isso é tão difícil evoluir. <span className="hero-destaque">Até agora.</span>
           </p>
         </motion.div>
       </div>

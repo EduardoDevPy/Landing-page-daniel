@@ -75,8 +75,8 @@ function Diferencial() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Cada paciente é analisado individualmente: metabolismo, rotina, preferências, dificuldades e objetivos.<br />
-          <strong>Nada genérico. Nada automático. Tudo pensado para você evoluir.</strong>
+          Cada paciente é analisado individualmente: metabolismo, rotina, preferências, objetivos e histórico, seja para emagrecer, ganhar massa ou melhorar a saúde.<br />
+          Nada genérico. Nada automático. <span className="hero-destaque">Tudo pensado para você evoluir.</span>
         </motion.p>
       </div>
     </section>

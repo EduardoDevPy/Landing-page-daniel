@@ -79,3 +79,23 @@
   font-size: 0.78rem;
   color: #aaa;
 }
+
+@media (max-width: 768px) {
+  .depoimentos-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding: 0 24px 16px;
+  }
+
+  .depoimentos-grid::-webkit-scrollbar { display: none; }
+
+  .depoimento-card {
+    flex: 0 0 80vw;
+    scroll-snap-align: start;
+  }
+}

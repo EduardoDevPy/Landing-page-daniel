@@ -1,6 +1,8 @@
 .diferencial {
   padding: 96px 24px;
-  background: var(--verde-escuro);
+  background:
+    linear-gradient(rgba(18, 46, 34, 0.92), rgba(18, 46, 34, 0.92)),
+    url('/src/assets/images/background-alface.webp') center/cover no-repeat;
   color: var(--branco);
   text-align: center;
 }

@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import { Smile, Shirt, Zap, Heart, Unlock, Trophy } from 'lucide-react'
+import { Smile, Dumbbell, Zap, Heart, Unlock, Trophy } from 'lucide-react'
 import '../styles/Transformacao.css'
 
 const promessas = [
   { icone: Smile, texto: 'Olhar no espelho e se sentir bem com o que vê' },
-  { icone: Shirt, texto: 'Vestir aquela roupa sem precisar pensar duas vezes' },
+  { icone: Dumbbell, texto: 'Ver o resultado do seu treino refletir no seu corpo' },
   { icone: Zap, texto: 'Acordar com energia e manter isso o dia todo' },
-  { icone: Heart, texto: 'Comer sem culpa e sem briga com a cabeça' },
-  { icone: Unlock, texto: 'Sair de vez do ciclo de dieta, recaída e frustração' },
+  { icone: Heart, texto: 'Ter exames em dia e saber que está cuidando da sua saúde' },
+  { icone: Unlock, texto: 'Perder gordura sem abrir mão da massa que você conquistou' },
   { icone: Trophy, texto: 'Ter um resultado que fica, não some em 2 meses' },
 ]
 
@@ -22,7 +22,7 @@ function Transformacao() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          A transformação que você merece
+          O resultado que você quer alcançar
         </motion.span>
         <motion.h2
           className="transformacao-titulo"
