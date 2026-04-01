@@ -6,9 +6,6 @@ import '../styles/Planos.css'
 const planos = [
   {
     nome: 'Basic',
-    de: 'R$200,00',
-    por: 'R$179,90',
-    parcelas: 'ou 2x s/ juros',
     consultas: '1 consulta',
     dias: '30 dias de acompanhamento',
     destaque: false,
@@ -21,9 +18,6 @@ const planos = [
   },
   {
     nome: 'Platinum',
-    de: 'R$600,00',
-    por: 'R$499,90',
-    parcelas: 'ou 4x s/ juros',
     consultas: '3 consultas',
     dias: '90 dias de acompanhamento',
     destaque: false,
@@ -36,9 +30,6 @@ const planos = [
   },
   {
     nome: 'Black',
-    de: 'R$1.200,00',
-    por: 'R$899,90',
-    parcelas: 'ou 4x s/ juros',
     consultas: '6 consultas',
     dias: '180 dias de acompanhamento',
     destaque: true,
@@ -124,12 +115,6 @@ function Planos({ whatsapp }) {
                 </div>
               )}
               <h3 className="plano-nome">Plano {plano.nome}</h3>
-              <div className="plano-preco">
-                <span className="plano-de">{plano.de}</span>
-                <span className="plano-por">{plano.por}</span>
-                <span className="plano-vista">à vista</span>
-                <span className="plano-parcelas">{plano.parcelas}</span>
-              </div>
               <div className="plano-consultas">
                 <strong>{plano.consultas}</strong>
                 <span>{plano.dias}</span>

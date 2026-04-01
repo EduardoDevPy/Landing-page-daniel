@@ -95,55 +95,6 @@
   color: var(--branco);
 }
 
-/* ── Preço ── */
-.plano-preco {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.plano-de {
-  font-size: 0.9rem;
-  text-decoration: line-through;
-  color: #e05252;
-  font-weight: 600;
-}
-
-.plano-card.destaque .plano-de {
-  color: #ff8585;
-}
-
-.plano-por {
-  font-size: 2rem;
-  font-family: var(--font-titulo);
-  font-weight: 800;
-  color: var(--verde-medio);
-  line-height: 1.1;
-}
-
-.plano-card.destaque .plano-por {
-  color: var(--verde-menta);
-}
-
-.plano-vista {
-  font-size: 0.85rem;
-  color: var(--cinza-texto);
-}
-
-.plano-card.destaque .plano-vista {
-  color: rgba(255,255,255,0.65);
-}
-
-.plano-parcelas {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--cinza-texto);
-}
-
-.plano-card.destaque .plano-parcelas {
-  color: rgba(255,255,255,0.75);
-}
-
 /* ── Consultas ── */
 .plano-consultas {
   display: flex;

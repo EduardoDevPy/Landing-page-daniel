@@ -21,7 +21,12 @@ function Navbar({ whatsapp }) {
           <span className="logo-nome">Daniel Henrique</span>
         </div>
 
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+        >
           <span></span><span></span><span></span>
         </button>
 

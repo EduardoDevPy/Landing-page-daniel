@@ -139,13 +139,23 @@ img {
     background: var(--verde-medio);
     opacity: 0.3;
     cursor: pointer;
-    padding: 0;
+    padding: 18px;
+    background-clip: content-box;
     transition: opacity 0.3s, transform 0.3s;
   }
 
   .carrossel-dot.ativo {
     opacity: 1;
     transform: scale(1.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 
