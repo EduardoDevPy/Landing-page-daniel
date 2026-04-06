@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { MessageCircle } from 'lucide-react'
 import logo from '../assets/images/logo.png'
 import '../styles/Navbar.css'
@@ -6,6 +6,7 @@ import '../styles/Navbar.css'
 function Navbar({ whatsapp }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -13,8 +14,18 @@ function Navbar({ whatsapp }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuOpen && navRef.current && !navRef.current.contains(e.target)) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [menuOpen])
+
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} ref={navRef}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logo} alt="Logo Daniel Henrique" className="logo-icone" />

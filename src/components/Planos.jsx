@@ -9,11 +9,13 @@ const planos = [
     consultas: '1 consulta',
     dias: '30 dias de acompanhamento',
     destaque: false,
+    mensagem: 'Olá, Daniel! Tenho interesse no Plano Basic (1 consulta / 30 dias de acompanhamento). Pode me passar mais informações?',
     itens: [
-      'Plano alimentar individualizado',
-      'Suporte via WhatsApp',
-      'Avaliação física',
-      'Orientação de suplementação',
+      'Plano alimentar personalizado',
+      'Suporte e dúvidas via WhatsApp',
+      'Avaliação física completa',
+      'Orientação e prescrição de suplementação',
+      'Direcionamento inicial',
     ],
   },
   {
@@ -21,11 +23,14 @@ const planos = [
     consultas: '3 consultas',
     dias: '90 dias de acompanhamento',
     destaque: false,
+    mensagem: 'Olá, Daniel! Tenho interesse no Plano Platinum (3 consultas / 90 dias de acompanhamento). Pode me passar mais informações?',
     itens: [
-      'Plano alimentar individualizado',
-      'Suporte via WhatsApp',
-      'Avaliação física',
-      'Orientação de suplementação',
+      'Tudo do plano Basic',
+      'Check-in Quinzenal',
+      'Ajustes frequentes (conforme necessidade)',
+      'Materiais exclusivos',
+      'Relatório de evolução',
+      'Suporte mais próximo',
     ],
   },
   {
@@ -33,16 +38,18 @@ const planos = [
     consultas: '6 consultas',
     dias: '180 dias de acompanhamento',
     destaque: true,
+    mensagem: 'Olá, Daniel! Tenho interesse no Plano Black (6 consultas / 180 dias de acompanhamento). Pode me passar mais informações?',
     itens: [
-      'Plano alimentar individualizado',
-      'Suporte via WhatsApp',
-      'Avaliação física',
-      'Orientação de suplementação',
+      'Tudo do plano Platinum',
+      'Prioridade no atendimento',
+      'Acompanhento intensivo',
+      'Estratégias comportamentais',
+      'Planejamento completo de rotina',
     ],
   },
 ]
 
-function Planos({ whatsapp }) {
+function Planos() {
   const gridRef = useRef(null)
   const [canPrev, setCanPrev] = useState(false)
   const [canNext, setCanNext] = useState(true)
@@ -52,8 +59,10 @@ function Planos({ whatsapp }) {
     const el = gridRef.current
     if (!el) return
     el.scrollLeft = 0
-    setCanPrev(false)
-    setCanNext(el.scrollWidth > el.clientWidth)
+    const raf = requestAnimationFrame(() => {
+      setCanNext(el.scrollWidth > el.clientWidth)
+    })
+    return () => cancelAnimationFrame(raf)
   }, [])
 
   function handleScroll() {
@@ -128,7 +137,7 @@ function Planos({ whatsapp }) {
                 ))}
               </ul>
               <motion.a
-                href={whatsapp}
+                href={`https://wa.me/1999815790?text=${encodeURIComponent(plano.mensagem)}`}
                 target="_blank"
                 rel="noreferrer"
                 className={plano.destaque ? 'btn-primary plano-btn' : 'btn-plano-outline'}

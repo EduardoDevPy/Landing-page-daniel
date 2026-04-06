@@ -20,8 +20,8 @@ function Hero({ whatsapp }) {
               <Leaf size={14} /> Nutrição Personalizada
             </motion.span>
             <motion.h1 className="hero-titulo" {...fadeUp(0.25)}>
-              Emagrecer, ganhar massa ou cuidar da saúde?<br />
-              <span className="hero-destaque">você merece um plano que funcione de verdade.</span>
+              Cansado de tentar evoluir, se esforçar, e mesmo assim<br />
+              <span className="hero-destaque">não ver resultados?</span>
             </motion.h1>
             <div className="hero-foto-mobile">
               <motion.img src={nutriDaniel} alt="Daniel Henrique, Nutricionista" className="hero-img" {...fadeUp(0.35)} />
@@ -45,7 +45,7 @@ function Hero({ whatsapp }) {
               </a>
             </motion.div>
             <motion.div className="hero-badges" {...fadeUp(0.7)}>
-              <span><CheckCircle size={15} /> Atendimento online</span>
+              <span><CheckCircle size={15} /> Atendimento online e presencial </span>
               <span><CheckCircle size={15} /> Plano 100% individualizado</span>
               <span><CheckCircle size={15} /> Suporte contínuo</span>
             </motion.div>
@@ -59,11 +59,6 @@ function Hero({ whatsapp }) {
             <img src={nutriDaniel} alt="Daniel Henrique, Nutricionista" className="hero-img" />
           </motion.div>
         </div>
-      </div>
-      <div className="hero-wave">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f5f0"/>
-        </svg>
       </div>
     </section>
   )

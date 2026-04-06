@@ -29,13 +29,16 @@ function QuemSou() {
             <span>Nutricionista</span>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Meu nome é Daniel Henrique, sou nutricionista e apaixonado por transformar vidas através da alimentação. Minha trajetória na nutrição começou com o propósito de ir além do básico, não apenas montar dietas, mas criar estratégias personalizadas que realmente funcionam na rotina de cada pessoa.
           </p>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Sou técnico em nutrição e dietética, graduado em nutrição e pós graduado em emagrecimento, hipertrofia e recomposição corporal avançada. Minhas especializações são emagrecimento, hipertrofia, comportamento alimentar, performance e qualidade de vida. Ao longo da minha carreira, venho me aprofundando constantemente em métodos atualizados e baseados em ciência para oferecer resultados reais e sustentáveis.
           </p>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Já ajudei mais de 1.000 vidas a conquistarem resultados como emagrecimento definitivo, melhora da autoestima, mais energia no dia a dia e uma relação mais equilibrada com a comida, sem dietas restritivas e sem efeito sanfona.
+          </p>
+          <p>
+            Acredito que a nutrição não deve ser um peso, e sim uma ferramenta de liberdade. Meu propósito é mostrar que é possível emagrecer e ter resultados sem sofrimento, sem radicalismos e sem abrir mão da sua vida social.
           </p>
         </motion.div>
       </div>

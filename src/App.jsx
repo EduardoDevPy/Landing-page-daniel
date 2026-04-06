@@ -21,7 +21,7 @@ function App() {
       <Dor />
       <Metodo whatsapp={WHATSAPP_LINK} />
       <Diferencial />
-      <Planos whatsapp={WHATSAPP_LINK} />
+      <Planos />
       <Transformacao />
       <QuemSou />
       <Depoimentos />

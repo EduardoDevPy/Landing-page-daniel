@@ -57,7 +57,7 @@ function CtaFinal({ whatsapp }) {
           transition={{ duration: 0.4, delay: 0.45 }}
         >
           <span><CheckCircle size={15} /> Vagas limitadas pela agenda</span>
-          <span><CheckCircle size={15} /> Atendimento online, em todo o Brasil</span>
+          <span><CheckCircle size={15} /> Suporte online disponível mundialmente.</span>
           <span><CheckCircle size={15} /> Resposta em até 24h</span>
         </motion.div>
       </div>
