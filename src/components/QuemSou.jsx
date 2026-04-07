@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import nutriDaniel from '../assets/images/nutriDaniel.jpeg'
+import nutriDaniel2 from '../assets/images/nutriDaniel2.jpg'
 import '../styles/QuemSou.css'
 
 function QuemSou() {
@@ -13,7 +13,7 @@ function QuemSou() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <img src={nutriDaniel} alt="Daniel Henrique, Nutricionista" />
+          <img src={nutriDaniel2} alt="Daniel Henrique, Nutricionista" />
         </motion.div>
 
         <motion.div
