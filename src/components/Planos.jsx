@@ -42,7 +42,7 @@ const planos = [
     itens: [
       'Tudo do plano Platinum',
       'Prioridade no atendimento',
-      'Acompanhento intensivo',
+      'Acompanhamento intensivo',
       'Estratégias comportamentais',
       'Planejamento completo de rotina',
     ],
