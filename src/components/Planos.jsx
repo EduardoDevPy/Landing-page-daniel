@@ -137,7 +137,7 @@ function Planos() {
                 ))}
               </ul>
               <motion.a
-                href={`https://wa.me/1999815790?text=${encodeURIComponent(plano.mensagem)}`}
+                href={`https://wa.me/19998157909?text=${encodeURIComponent(plano.mensagem)}`}
                 target="_blank"
                 rel="noreferrer"
                 className={plano.destaque ? 'btn-primary plano-btn' : 'btn-plano-outline'}
