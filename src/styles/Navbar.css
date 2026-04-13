@@ -4,15 +4,12 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 20px 0;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-
-.navbar.scrolled {
-  background: var(--verde-escuro);
   padding: 14px 0;
+  background: var(--verde-escuro);
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .navbar-container {
