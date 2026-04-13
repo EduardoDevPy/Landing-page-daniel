@@ -70,3 +70,10 @@
     gap: 48px;
   }
 }
+
+@media (max-width: 600px) {
+  .metodo { padding: 72px 16px; }
+  .metodo-container { gap: 36px; }
+  .metodo-item { padding: 16px; gap: 12px; }
+  .metodo-sub { font-size: 0.95rem; }
+}

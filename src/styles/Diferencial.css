@@ -76,17 +76,24 @@
   color: var(--amarelo);
 }
 
+@media (max-width: 768px) {
+  .diferencial { padding: 72px 20px; }
+  .diferencial-titulo { margin-bottom: 40px; }
+  .diferencial-card { padding: 28px 24px; }
+  .diferencial-card.destaque { transform: scale(1); }
+}
+
 @media (max-width: 600px) {
+  .diferencial { padding: 64px 16px; }
   .diferencial-grid {
     flex-direction: column;
     align-items: center;
   }
-
   .diferencial-card {
     width: 100%;
     max-width: 100%;
+    min-width: unset;
   }
-
   .diferencial-vs {
     text-align: center;
     width: 100%;

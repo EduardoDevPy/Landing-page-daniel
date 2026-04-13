@@ -65,6 +65,20 @@
   font-size: 1.05rem;
 }
 
+@media (max-width: 768px) {
+  .dor { padding: 72px 20px; }
+  .dor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .dor-titulo { margin-bottom: 40px; }
+}
+
 @media (max-width: 600px) {
-  .dor-conclusao { padding: 28px 24px; }
+  .dor { padding: 64px 16px; }
+  .dor-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .dor-card { padding: 20px 16px; }
+  .dor-conclusao { padding: 28px 20px; font-size: 0.95rem; }
 }

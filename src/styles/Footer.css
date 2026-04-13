@@ -38,3 +38,9 @@
 .footer-links a:hover { color: var(--branco); }
 
 .footer-legal { font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+  .footer { padding: 40px 16px; }
+  .footer-links { gap: 16px; }
+  .footer-logo { font-size: 1rem; }
+}

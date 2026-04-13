@@ -81,6 +81,10 @@
 }
 
 @media (max-width: 768px) {
+  .depoimentos { padding: 72px 0; }
+  .depoimentos-container { padding: 0 20px; }
+  .depoimentos-titulo { padding: 0 4px; margin-bottom: 40px; }
+
   .depoimentos-grid {
     display: flex;
     flex-direction: row;
@@ -89,13 +93,18 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     gap: 16px;
-    padding: 0 24px 16px;
+    padding: 0 20px 16px;
   }
 
   .depoimentos-grid::-webkit-scrollbar { display: none; }
 
   .depoimento-card {
-    flex: 0 0 80vw;
+    flex: 0 0 82vw;
     scroll-snap-align: start;
+    padding: 28px 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .depoimento-card { flex: 0 0 88vw; }
 }

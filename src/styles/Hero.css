@@ -91,10 +91,18 @@
   .hero-foto-desktop { display: none; }
   .hero-foto-mobile { display: block; margin: 20px 0; }
   .hero-img { height: 300px; width: 100%; }
+  .hero-container { padding: 100px 20px 80px; }
 }
 
 @media (max-width: 600px) {
   .hero-btns { flex-direction: column; }
-  .hero-btns a { text-align: center; }
-  .hero-badges { gap: 12px; }
+  .hero-btns a { text-align: center; width: 100%; }
+  .hero-badges { gap: 10px; }
+  .hero-subtitulo { font-size: 1rem; }
+  .hero-container { padding: 90px 16px 64px; }
+}
+
+@media (max-width: 380px) {
+  .hero-img { height: 240px; }
+  .hero-badges span { font-size: 0.8rem; }
 }

@@ -191,25 +191,31 @@
 
 /* ── Responsivo ── */
 @media (max-width: 768px) {
+  .planos { padding: 72px 0; }
+  .planos-container { padding: 0 20px; }
+  .planos-titulo { padding: 0 4px; margin-bottom: 40px; }
+
   .planos-grid {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-left: 24px;
+    scroll-padding-left: 20px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     align-items: stretch;
     gap: 16px;
-    padding: 16px 24px 24px;
+    padding: 16px 20px 24px;
   }
 
   .planos-grid::-webkit-scrollbar { display: none; }
 
   .plano-card {
-    flex: 0 0 68vw;
-    max-width: 68vw;
+    flex: 0 0 78vw;
+    max-width: 78vw;
+    min-width: unset;
+    padding: 32px 24px;
     scroll-snap-align: start;
   }
 
@@ -220,5 +226,13 @@
 
   .plano-card.destaque:hover {
     transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .plano-card {
+    flex: 0 0 86vw;
+    max-width: 86vw;
+    padding: 28px 20px;
   }
 }

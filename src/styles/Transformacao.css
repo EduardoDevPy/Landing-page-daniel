@@ -57,3 +57,26 @@
   font-size: 1.2rem !important;
   margin-top: 12px;
 }
+
+@media (max-width: 768px) {
+  .transformacao { padding: 72px 20px; }
+  .transformacao-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .transformacao-titulo { margin-bottom: 40px; }
+}
+
+@media (max-width: 600px) {
+  .transformacao { padding: 64px 16px; }
+  .transformacao-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .transformacao-card { padding: 24px 16px; gap: 10px; }
+  .fecho-destaque { font-size: 1.05rem !important; }
+}
+
+@media (max-width: 380px) {
+  .transformacao-grid { grid-template-columns: 1fr; }
+}
