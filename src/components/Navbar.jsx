@@ -20,8 +20,15 @@ function Navbar({ whatsapp }) {
         setMenuOpen(false)
       }
     }
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
   }, [menuOpen])
 
   return (
@@ -42,9 +49,11 @@ function Navbar({ whatsapp }) {
         </button>
 
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+          <li><a href="#inicio" onClick={() => setMenuOpen(false)}>Início</a></li>
           <li><a href="#metodo" onClick={() => setMenuOpen(false)}>Método</a></li>
           <li><a href="#planos" onClick={() => setMenuOpen(false)}>Planos</a></li>
           <li><a href="#depoimentos" onClick={() => setMenuOpen(false)}>Depoimentos</a></li>
+          <li><a href="#quem-sou" onClick={() => setMenuOpen(false)}>Quem sou</a></li>
           <li>
             <a href={whatsapp} target="_blank" rel="noreferrer" className="navbar-cta">
               <MessageCircle size={16} /> Quero começar

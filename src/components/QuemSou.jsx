@@ -13,7 +13,7 @@ function QuemSou() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <img src={nutriDaniel2} alt="Daniel Henrique, Nutricionista" />
+          <img src={nutriDaniel2} alt="Daniel Henrique, Nutricionista" loading="lazy" />
         </motion.div>
 
         <motion.div
