@@ -20,7 +20,7 @@ function Hero({ whatsapp }) {
               <Leaf size={14} /> Nutrição Personalizada
             </motion.span>
             <motion.h1 className="hero-titulo" {...fadeUp(0.25)}>
-              Cansado de tentar evoluir, se esforçar, e mesmo assim<br />
+              Cansou de tentar evoluir, se esforçar, e mesmo assim<br />
               <span className="hero-destaque">não ver resultados?</span>
             </motion.h1>
             <div className="hero-foto-mobile">
